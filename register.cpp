@@ -3,7 +3,7 @@
 #include "ewaste.hpp"
 using namespace std;
 
-
+// Programmer: Tan Ee Joe
 // Purpose: Register a new E-Waste item.
 
 void registerEWaste(vector<EWasteRecord>& records,

@@ -4,7 +4,7 @@
 #include "ewaste.hpp"
 
 using namespace std;
-
+// Programmer: Tan Ee Joe
 // Purpose: Display all registered E-Waste records.
 
 void viewRecords(const vector<EWasteRecord>& records)

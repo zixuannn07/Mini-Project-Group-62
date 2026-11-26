@@ -6,7 +6,7 @@
 
 using namespace std;
 
-
+// Programmer: Tan Ee Joe
 // Purpose: Obtain valid text input from the user.
 
 string getNonEmptyInput(const string& prompt)
@@ -33,7 +33,7 @@ string getNonEmptyInput(const string& prompt)
 }
 
 
-
+// Programmer: Tan Ee Joe
 // Purpose: Obtain a valid menu choice.
 
 int getMenuChoice(int minimum, int maximum)
