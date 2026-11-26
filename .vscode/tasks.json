@@ -13,15 +13,16 @@
                 "-Wall",
                 "-Wextra",
                 "-Wconversion",
-                "${workspaceFolder}\\main.cpp",
-                "${workspaceFolder}\\fileHandling.cpp",
-                "${workspaceFolder}\\inputAndMenu.cpp",
-                "${workspaceFolder}\\recycling.cpp",
-                "${workspaceFolder}\\recordManagement.cpp",
-                "${workspaceFolder}\\weightCalculation.cpp",
-                "${workspaceFolder}\\program.cpp",
+                "${workspaceFolder}/mainpage.cpp",
+                "${workspaceFolder}/register.cpp",
+                "${workspaceFolder}/view.cpp",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/fileHandling.cpp",
+                "${workspaceFolder}/recycling.cpp",
+                "${workspaceFolder}/recordManagement.cpp",
+                "${workspaceFolder}/weightCalculation.cpp",
                 "-o",
-                "${workspaceFolder}\\ewaste.exe"
+                "${workspaceFolder}/ewaste.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
