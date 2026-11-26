@@ -2,8 +2,8 @@
 #include <iostream>
 #include <iomanip>
 #include "ewaste.hpp"
-
 using namespace std;
+
 // Programmer: Tan Ee Joe
 // Purpose: Display all registered E-Waste records.
 
