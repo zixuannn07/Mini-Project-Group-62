@@ -125,15 +125,15 @@ void runProgram(const string& filename)
                 break;
 
             case 8:
-                cout << "Calculate Recycled Weight" << endl;
+                calculateRecycledWeight(records);
                 break;
 
             case 9:
-                cout << "Generate Recycling Report" << endl;
+                generateRecyclingReport(records);
                 break;
 
             case 10:
-                cout << "Generate Report Summary" << endl;
+                 generateSummaryReport(records);
                 break;
 
             case 0:

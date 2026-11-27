@@ -67,5 +67,17 @@ int getMenuChoice(int minimum, int maximum);
 // Purpose: Run the program menu and coordinate the three e-waste modules.
 void runProgram(const string& filename);
 
+// Programmer: Gan Ee Hom
+// Purpose: Calculate the total weight of recycled E-Waste.
+double calculateRecycledWeight(const vector<EWasteRecord>& records);
+
+// Programmer: Gan Ee Hom
+// Purpose: Generate recycling percentage and statistics.
+void generateRecyclingReport(const vector<EWasteRecord>& records);
+
+// Programmer: Gan Ee Hom
+// Purpose: Generate the overall E-Waste summary.
+void generateSummaryReport(const vector<EWasteRecord>& records);
+
 #endif
 
