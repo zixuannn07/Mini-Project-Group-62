@@ -8,18 +8,18 @@ using namespace std;
 
 double calculateRecycledWeight(const vector<EWasteRecord>& records)
 {
-    double totalWeight = 0.0;
+    double RecycledWeight = 0.0;
 
     for (size_t i = 0; i < records.size(); i++)
     {
         if (records[i].status == "Recycled")
         {
-            totalWeight += records[i].weight;
+            RecycledWeight += records[i].weight;
         }
     }
 
     cout << fixed << setprecision(2);
     cout << "\n===== RECYCLED WEIGHT =====" << endl;
-    cout << "Total Recycled Weight: " << totalWeight << " kg" << endl;
-    return 0;
+    cout << "Total Recycled Weight: " << RecycledWeight << " kg" << endl;
+    return RecycledWeight;
 }
