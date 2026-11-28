@@ -21,6 +21,9 @@
                 "${workspaceFolder}/recycling.cpp",
                 "${workspaceFolder}/recordManagement.cpp",
                 "${workspaceFolder}/weightCalculation.cpp",
+                "${workspaceFolder}/calculate.cpp",
+                "${workspaceFolder}/recyclingreport.cpp",
+                "${workspaceFolder}/summary.cpp",
                 "-o",
                 "${workspaceFolder}/ewaste.exe"
             ],

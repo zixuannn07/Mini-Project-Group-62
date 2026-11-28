@@ -4,53 +4,69 @@
 using namespace std;
 
 // Programmer: Gan Ee Hom
-// Purpose: Generate a report showing recycling percentage
-// and overall recycling statistics.
+// Purpose: Generate an overview of all registered
+// E-Waste records in the system.
 
-void generateRecyclingReport(const vector<EWasteRecord>& records)
+void generateSummaryReport(const vector<EWasteRecord>& records)
 {
     double totalWeight = calculateTotalWeight(records);
-    double recycledWeight = calculateRecycledWeight(records);
-    double percentage = 0.0;
 
-    int recycledCount = 0;
-    int notRecycledCount = 0;
-
-    for (size_t i = 0; i < records.size(); i++)
-    {
-        if (records[i].status == "Recycled")
-        {
-            recycledWeight += records[i].weight;
-            recycledCount++;
-        }
-        else if (records[i].status == "Not Recycled")
-        {
-            notRecycledCount++;
-        }
-    }
-
-    if (totalWeight > 0)
-    {
-        percentage = (recycledWeight / totalWeight) * 100;
-    }
-
-    cout << "\n========== RECYCLING REPORT ==========\n";
+    cout << "\n========================================\n";
+    cout << "       E-WASTE MANAGEMENT OVERVIEW\n";
+    cout << "========================================\n";
 
     cout << fixed << setprecision(2);
 
-    cout << "Total Registered Records: "<< records.size() << endl;
+    // Check whether records are available
+    if (records.empty())
+    {
+        cout << "\nNo E-Waste records available.\n";
+        cout << "Please register some records first.\n";
 
-    cout << "Total Collected Weight: "<< totalWeight << " kg" << endl;
+        cout << "\n========================================\n";
+        return;
+    }
 
-    cout << "Total Recycled Weight: "<< recycledWeight << " kg" << endl;
+    // Find the heaviest and lightest items
+    double heaviestWeight = records[0].weight;
+    double lightestWeight = records[0].weight;
 
-    cout << "Recycling Percentage: "<< percentage << "%" << endl;
+    string heaviestItem = records[0].itemName;
+    string lightestItem = records[0].itemName;
 
-    cout << "\n========== RECYCLING STATISTICS ==========\n";
+    for (size_t i = 1; i < records.size(); i++)
+    {
+        if (records[i].weight > heaviestWeight)
+        {
+            heaviestWeight = records[i].weight;
+            heaviestItem = records[i].itemName;
+        }
 
-    cout << "Recycled Items: "<< recycledCount << endl;
+        if (records[i].weight < lightestWeight)
+        {
+            lightestWeight = records[i].weight;
+            lightestItem = records[i].itemName;
+        }
+    }
 
-    cout << "Not Recycled Items: "<< notRecycledCount << endl;
+    // Display management overview
+    cout << "\n--- GENERAL INFORMATION ---\n";
 
-    cout << "=========================================\n";
+    cout << "Total Registered Items: "<< records.size() << endl;
+
+    cout << "Total E-Waste Weight: "<< totalWeight << " kg" << endl;
+
+    cout << "\n--- WEIGHT ANALYSIS ---\n";
+
+    cout << "Heaviest Item: " << heaviestItem << endl;
+
+    cout << "Heaviest Item Weight: "<< heaviestWeight << " kg" << endl;
+
+    cout << "Lightest Item: "<< lightestItem << endl;
+
+    cout << "Lightest Item Weight: "<< lightestWeight << " kg" << endl;
+
+    cout << "\n========================================\n";
+    cout << "       END OF MANAGEMENT OVERVIEW\n";
+    cout << "========================================\n";
 }
