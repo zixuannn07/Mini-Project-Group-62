@@ -21,4 +21,5 @@ double calculateRecycledWeight(const vector<EWasteRecord>& records)
     cout << fixed << setprecision(2);
     cout << "\n===== RECYCLED WEIGHT =====" << endl;
     cout << "Total Recycled Weight: " << totalWeight << " kg" << endl;
+    return 0;
 }
